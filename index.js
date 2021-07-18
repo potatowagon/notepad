@@ -1,15 +1,21 @@
 var canvas = document.getElementById("myCanvas");
-//var ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-// ctx.moveTo(0, 0);
-// ctx.lineTo(200, 100);
-// ctx.stroke();
-// //var c = document.getElementById("myCanvas");
-// //var ctx = c.getContext("2d");
-// ctx.beginPath();
-// ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-// ctx.stroke();
+canvas.style.position = "absolute";
+
+var menu = document.getElementById("menu");
+menu.style.position = "absolute";
+
+var red = document.getElementById("red");
+red.style.backgroundColor = "red";
+var green = document.getElementById("green");
+green.style.backgroundColor = "green";
+var blue = document.getElementById("blue");
+blue.style.backgroundColor = "blue";
+var black = document.getElementById("black");
+black.style.backgroundColor = "black";
+
+var PEN_COLOUR = 'black'
 
 // When true, moving the mouse draws on the canvas
 let isDrawing = false;
@@ -46,10 +52,19 @@ window.addEventListener('mouseup', e => {
 
 function drawLine(context, x1, y1, x2, y2) {
   context.beginPath();
-  context.strokeStyle = 'black';
+  context.strokeStyle = PEN_COLOUR;
   context.lineWidth = 1;
   context.moveTo(x1, y1);
   context.lineTo(x2, y2);
   context.stroke();
   context.closePath();
+}
+
+function changeColour(id) {
+  PEN_COLOUR = id;
+}
+
+function clean() {
+  console.log("c");
+  context.clearRect(0, 0, canvas.width, canvas.height);
 }
