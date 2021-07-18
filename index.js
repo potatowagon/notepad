@@ -65,6 +65,5 @@ function changeColour(id) {
 }
 
 function clean() {
-  console.log("c");
   context.clearRect(0, 0, canvas.width, canvas.height);
 }
