@@ -10,11 +10,18 @@
 <body>
     <canvas id="myCanvas"></canvas>
     <div id="menu">
+        <button type="button" class="box" id="black" onclick="changeColour(this.id)">BLACK</button>
+        <button type="button" class="box" id="brown" onclick="changeColour(this.id)">BROWN</button>
+        <button type="button" class="box" id="#89cff0" onclick="changeColour(this.id)">BLUE</button>
+        <button type="button" class="box" id="pink" onclick="changeColour(this.id)">PINK</button>
+        <button type="button" class="box" id="grey" onclick="changeColour(this.id)">GREY</button>
         <button type="button" class="box" id="red" onclick="changeColour(this.id)">RED</button>
+        <button type="button" class="box" id="orange" onclick="changeColour(this.id)">ORANGE</button>
+        <button type="button" class="box" id="yellow" onclick="changeColour(this.id)">YELLOW</button>
         <button type="button" class="box" id="green" onclick="changeColour(this.id)">GREEN</button>
         <button type="button" class="box" id="blue" onclick="changeColour(this.id)">BLUE</button>
-        <button type="button" class="box" id="black" onclick="changeColour(this.id)">BLACK</button>
-        <button type="button" class="box" id="clear" onclick="clean()">XXXX</button>
+        <button type="button" class="box" id="purple" onclick="changeColour(this.id)">PURPLE</button>
+        <button type="button" style="color: white" id="clear" onclick="clean()">X</button>
     </div>
     <script src="index.js"></script>
 </body>

@@ -6,14 +6,13 @@ canvas.style.position = "absolute";
 var menu = document.getElementById("menu");
 menu.style.position = "absolute";
 
-var red = document.getElementById("red");
-red.style.backgroundColor = "red";
-var green = document.getElementById("green");
-green.style.backgroundColor = "green";
-var blue = document.getElementById("blue");
-blue.style.backgroundColor = "blue";
-var black = document.getElementById("black");
-black.style.backgroundColor = "black";
+function loadColourOptions() {
+  var boxes = document.getElementsByClassName("box");
+  for (let element of boxes) {
+    element.style.backgroundColor = element.id;
+  }
+}
+loadColourOptions();
 
 var PEN_COLOUR = 'black'
 
